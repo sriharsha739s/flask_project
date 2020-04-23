@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>COVID-19 Probability calc</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">COVID-19 Probability Calc</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/detector">Probability detector</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map">Mapping of cases</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/blog">Blog for victims</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/post">Post something</a>
+                </li>
+                <li>
+                    <a class='nav-link' href ="/temp"> Temperature check</a>
+                </li>
+                
+                </ul>
+            </div>
+            </nav>
+        </section>
+
+        <div class="container">
+            <h2 class="text-center mt-4">Coronavirus Detector (Probability)</h2>
+            <form action="/detector" method="POST">
+                <div class="form-group">
+                  <label for="fever">Enter Fever Value (farenheit)</label>
+                  <input type="text" class="form-control" id="fever" name="fever" placeholder="Enter your fever in farenheit">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Enter Age</label>
+                    <input type="text" class="form-control" id="age" name="age" placeholder="Enter your age">
+                  </div>
+
+                
+                <div class="form-group">
+                  <label for="pain">Body Pain</label>
+                  <select class="form-control custom-select" name="pain" id="pain">
+                    <option value="0">No pain</option>
+                    <option value="1">Severe pain or Unnatural Pain</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="runnyNose"> Runny Nose</label>
+                    <select class="form-control custom-select" name="runnyNose" id="runnyNose">
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="diffBreathing">Breathing Difficulty</label>
+                    <select class="form-control custom-select" name="diffBreathing" id="diffBreathing">
+                      <option value="-1">Can breath normally</option>
+                      <option value="0">Little difficulty</option>
+                      <option value="1">Quite difficult or abnormal breathing</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Tiredness">Tiredness</label>
+                    <select class="form-control custom-select" name="tiredness" id="tiredness">
+                      <option value="-1">No unsual tiredness</option>
+                      <option value="0">Somewhat tired</option>
+                      <option value="1">Unusual tiredness/ exhausted</option>
+                    </select>
+                </div>
+                
+                <input type="submit" name = "calculate" value="Calculate probability">
+              </form>
+
+        <div class="black", methods = "POST">
+            <p style="margin-top: 13px;">Your probability of being infected with the coronavirus is {{fp}}%</p>
+        <div>
+
+    </div>
+
+    </body>
+</html>

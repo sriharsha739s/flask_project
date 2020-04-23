@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>COVID-19 hackathon project</title>
+        <link rel="stylesheet" type="style/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">COVID-19 Blogs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="detector">Probability detector</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/map">Mapping of cases</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/blog">Blog for victims</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/post">Post something</a>
+                </li>
+
+                <li>
+                    <a class='nav-link active' href ="/temp"> Temperature check</a>
+                </li>
+
+                </ul>
+            </div>
+            </nav>
+        </section>
+
+        <div class="container">
+            <h2 class="text-center mt-4">Enter temperature</h2>
+                <form action="/temp" method="POST">
+                    <div class="form-group">
+                        <label for="fullname">Enter your full name</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="temperature">Enter your temperature</label>
+                        <input type="text" class="form-control" id="temperature" name="temperature" placeholder="35 C or 104 F">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prob">Enter the probability which you can get from the probability detector</label>
+                        <input type="text" class="form-control" id="prob" name="prob" placeholder="50%">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number">Contact number</label>
+                        <input type="text" class="form-control" id="number" name="number" placeholder="1234 5678">
+                    </div>
+
+                    <input type="submit" name = "tempupdate" value="Update temperature">
+                </form>
+            </div>
+    </body>
+</html>
